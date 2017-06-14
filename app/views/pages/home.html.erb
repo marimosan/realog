@@ -1,0 +1,25 @@
+<div class="row">
+  <aside class="col-xs-9">
+    <ol class="feeds">
+      <% @logs.each do |log| %>
+        <li class="feed-unit">
+          <span class="feed-name"><%= log.name %></span>
+          <span class="feed-content"><%= simple_format(log.content) %></span>
+          <span class="feed-date"><%= log.date %></span>
+        </li>
+      <% end %>
+      <%= paginate @logs, :window => 3 %>
+    </ol>
+  </aside>
+  <div class="col-xs-3">
+    <div class="manual-update">
+      <% if update_base_time > wait_time %>
+        <%= button_to("手動更新", update_path , id: "update-log" , class: "btn btn-primary") %>
+      <% else %>
+        <%= button_to("手動更新", update_path , id: "update-log" , class: "btn btn-primary", disabled: "disabled") %>
+        <div>手動更新可能まであと<%= remaining_to_update %></div>
+      <% end %>
+      <div>最終更新時刻　<%= Flg.find_by(name: "最終更新日時フラグ")[:updated_at].strftime('%Y/%m/%d %H:%M') %></div>
+    </div>
+  </div>
+</div>

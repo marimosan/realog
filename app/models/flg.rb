@@ -1,0 +1,2 @@
+class Flg < ApplicationRecord
+end

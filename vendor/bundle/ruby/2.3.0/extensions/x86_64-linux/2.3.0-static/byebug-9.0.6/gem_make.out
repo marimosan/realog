@@ -1,0 +1,23 @@
+current directory: /home/vagrant/share/Realog/vendor/bundle/ruby/2.3.0/gems/byebug-9.0.6/ext/byebug
+/home/vagrant/.rbenv/versions/2.3.0/bin/ruby -r ./siteconf20170606-17591-g86er.rb extconf.rb
+creating Makefile
+
+current directory: /home/vagrant/share/Realog/vendor/bundle/ruby/2.3.0/gems/byebug-9.0.6/ext/byebug
+make "DESTDIR=" clean
+make: Warning: File `Makefile' has modification time 0.025 s in the future
+make: 警告:  時刻のずれを検出. 不完全なビルド結果になるかもしれません.
+
+current directory: /home/vagrant/share/Realog/vendor/bundle/ruby/2.3.0/gems/byebug-9.0.6/ext/byebug
+make "DESTDIR="
+make: Warning: File `Makefile' has modification time 0.015 s in the future
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.so
+make: 警告:  時刻のずれを検出. 不完全なビルド結果になるかもしれません.
+
+current directory: /home/vagrant/share/Realog/vendor/bundle/ruby/2.3.0/gems/byebug-9.0.6/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.so ./.gem.20170606-17591-1kkqbu3/byebug

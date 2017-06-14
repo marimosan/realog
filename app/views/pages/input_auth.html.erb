@@ -1,0 +1,7 @@
+<%= form_for(:auth, url: check_path) do |f| %>
+  <div>
+    <%= f.label "ログイン用パスワード" %>
+    <%= f.password_field :pass, class: "password" %>
+  </div>
+  <%= f.submit "ログイン",  class: "btn btn-primary"  %>
+<% end %>
