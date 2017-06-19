@@ -13,6 +13,7 @@ set :deploy_to, "/rails/Realog"
 # Default value for :format is :airbrussh.
 set :format, :pretty
 set :log_level, :debug
+set :use_sudo, true
 
 # You can configure the Airbrussh format using :format_options.
 # These are the defaults.

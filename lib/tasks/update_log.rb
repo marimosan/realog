@@ -11,4 +11,14 @@ class Tasks::UpdateLog
     Log.update_by_feeds(feeds)
     Rails.logger.debug("End Update Log Auto #{Time.now}")
   end
+
+  def self.update_log_immediately
+    Rails.logger.debug("Start Update Log Manual #{Time.now}")
+    crawl = GetReal::Crawler.new
+    crawl.login
+    feeds = GetReal::Parser.get_feeds_by_html(crawl.html)
+    Log.update_by_feeds(feeds)
+    Rails.logger.debug("End Update Log Manual#{Time.now}")
+  end
+
 end

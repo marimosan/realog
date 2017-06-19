@@ -13,9 +13,9 @@ stdout_path File.expand_path('../../log/unicorn_stdout.log', __FILE__)
 
 ###注
 # Nginxで使用する場合は以下の設定を行う。
-#listen File.expand_path('/var/run/unicorn/unicorn.sock', __FILE__)
+listen File.expand_path('/var/run/unicorn/unicorn_Realog.sock', __FILE__)
 # Unicorn単体で使う場合は以下。
-listen 3000
+#listen 3000
 
 pid File.expand_path('../../tmp/pids/unicorn.pid', __FILE__)
 

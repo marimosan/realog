@@ -4,7 +4,7 @@ module PagesHelper
   end
 
   def wait_time
-    60 * 30
+    60 * 15
   end
 
   def update_base_time
